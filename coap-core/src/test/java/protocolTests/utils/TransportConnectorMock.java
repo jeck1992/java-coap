@@ -24,7 +24,7 @@ import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.util.LinkedHashMap;
 import java.util.Map;
-import java.util.Optional;
+import java8.util.Optional;
 
 /**
  * Created by szymon
@@ -85,7 +85,7 @@ public class TransportConnectorMock implements CoapTransport {
             throw new RuntimeException(e);
         }
 
-        Optional<CoapPacket> first = conversationMap.keySet().stream().findFirst();
+        Optional<CoapPacket> first = conversationMap.isEmpty() ? Optional.empty() : Optional.of(conversationMap.keySet().iterator().next());
         if (!first.isPresent() || !first.get().equals(coapPacket)) {
             return null;
         }

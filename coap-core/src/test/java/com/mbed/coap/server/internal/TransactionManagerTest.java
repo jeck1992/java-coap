@@ -26,7 +26,7 @@ import com.mbed.coap.transport.InMemoryCoapTransport;
 import com.mbed.coap.transport.TransportContext;
 import com.mbed.coap.utils.Callback;
 import java.net.InetSocketAddress;
-import java.util.Optional;
+import java8.util.Optional;
 import org.junit.Before;
 import org.junit.Test;
 
